@@ -61,3 +61,70 @@ function isPrime(num){
    for (const element of oldArray){
       newArray.push(element);
    }
+
+   //Remove falsy values
+
+   function removeFalsyValues(arr){
+      return arr.filter(boolean);
+   }
+   console.log(removeFalsyValues([0,1,false,2,'',3,null,undefined,'hello']));
+
+   //Find largest number in array
+   function findLargestNumber(arr){
+      return Math.max(...arr);
+   }
+
+   console.log(findLargestNumber([1,5,3,9,2]));
+
+   //Find smallest number in array
+   function findSmallestNumber(arr){
+      return Math.min(...arr);
+   }     
+
+   console.log(findSmallestNumber([1,5,3,9,2]));
+
+
+   // fibonacci sequence
+
+   function fibonacci(n){
+      if (n<=0){
+            return[];
+          } else if (n===1){
+            return [0];
+          }
+      const fib = [0,1];
+          
+      for(let i=2; i<n; i++){
+        const  nextN = fib[i-1] + fib[i-2];
+        fib.push(nextN);
+      }        
+      return fib;
+   }     
+
+   console.log(fibonacci(7));
+
+   // how to call a function
+
+   function callfun(){}
+
+   const myfun = () => {};
+
+   const newfun = new Function();
+
+   // array of objects to a single object
+
+   function AObj(arr){
+   return arr.reduce((Accum,cItem) => {
+      let key = cItem.id ;
+      let value = cItem.value ;
+
+      Accum[key] = value ;
+      return Accum;
+    },{});
+   }
+
+   //remove duplicates from array
+
+   function  remDu(arr){
+      return [...new set(arr)];
+   }
