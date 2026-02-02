@@ -1,3 +1,4 @@
+
 function isPalindrome(string){
    return string === string.split('').reverse().join('') ;
 }
@@ -128,3 +129,19 @@ function isPrime(num){
    function  remDu(arr){
       return [...new set(arr)];
    }
+
+   //is an anagram
+
+   function areAnagrams(str1, str2){
+      return str1.split('').sort().join('') === str2.split('').sort().join('');
+   }
+   
+   // find largest number in a mixed input array
+
+    
+   function mixedArr(arr){
+      return Math.max(...arr.filter(item => typeof item === 'number'));
+   }
+
+   const arr=[1,2,6,3,'john','adam',4,5];
+   console.log(mixedArr(arr));
