@@ -144,4 +144,16 @@ function isPrime(num){
    }
 
    const arr=[1,2,6,3,'john','adam',4,5];
-   console.log(mixedArr(arr));
+
+   // merge arrays
+
+   function mergeArr(arr1,arr2){
+      return [...arr1,...arr2];
+   }
+
+   //stringify JS object to a Json string
+
+   const obj = {name:'abah', age:40, wife : 'mbong'};
+   const JsonString = JSON.stringify(obj);
+
+   console.log(JsonString)
