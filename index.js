@@ -157,3 +157,27 @@ function isPrime(num){
    const JsonString = JSON.stringify(obj);
 
    console.log(JsonString)
+
+   // create empty string
+
+   const emptyString = "";
+
+   //array of strings to single string
+
+   function converts(arr){
+      return arr.join('');
+   }
+
+   console.log("name","age","height","size");
+
+   //new array from old one with elements dounbled
+
+  let arr1 = [0,67,33,98,7,8]
+
+  let arr2 = arr1.map(item => item*2 )
+   console.log(arr2);
+
+   //array includes specific element
+
+   let aFrr=[1,2,3,4,5];
+   console.log(aFrr.includes(5));
